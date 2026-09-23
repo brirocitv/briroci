@@ -312,6 +312,7 @@ nav {
 }
 
 .contenedor-planes {
+    left: 50%;
     max-width: 1100px;
     margin: 50px auto 0;
 
@@ -429,6 +430,17 @@ nav {
     letter-spacing: 1px;
 }
 
+/* AGREGADO */
+
+/* Centrar el plan inferior si es impar (solo PC) */
+@media (min-width: 801px) {
+    .contenedor-planes .plan:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 15px); /* 50% menos la mitad de la separación del gap (30px) */
+    }
+}
+
 /* =========================
    CONTACTO
 ========================= */
@@ -462,112 +474,32 @@ nav {
 }
 
 /* =========================
-   CELULARES
-========================= */
-
-@media (max-width: 800px) {
-        .contenedor-beneficios {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    header {
-        padding: 20px;
-    }
-
-    .menu {
-        gap: 15px;
-    }
-
-    .contenido-inicio h1 {
-        font-size: 40px;
-    }
-
-    .contenedor-servicios {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contenedor-planes {
-        grid-template-columns: 1fr;
-    }
-        .contenedor-planes {
-        grid-template-columns: 1fr;
-    }
-
-    .plan {
-        padding: 35px 25px;
-    }
-}
-
-@media (max-width: 500px) {
-    .beneficios {
-        padding: 70px 20px;
-    }
-
-    .contenedor-beneficios {
-        grid-template-columns: 1fr;
-    }
-    .menu {
-        display: none;
-    }
-
-    .contenido-inicio h1 {
-        font-size: 34px;
-    }
-
-    .contenido-inicio p {
-        font-size: 18px;
-    }
-
-    .servicios,
-    .planes {
-        padding: 70px 20px;
-    }
-
-    .contenedor-servicios {
-        grid-template-columns: 1fr;
-    }
-
-    .servicios h2,
-    .planes h2,
-    .contacto h2 {
-        font-size: 32px;
-    }
-}
-/* =========================
    WHATSAPP FLOTANTE
 ========================= */
-
 .whatsapp-flotante {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-
-    width: 60px;
-    height: 60px;
-
-    background-color: #25D366;
-    color: white;
-
-    border-radius: 50%;
-
+    right: 20px;
+    bottom: 20px;
+    width: 65px; /* Tamaño de la imagen */
+    height: 65px;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-decoration: none;
-
-    font-size: 30px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-
-    z-index: 9999;
-
-    transition: 0.3s;
 }
 
-.whatsapp-flotante:hover {
-    transform: scale(1.1);
-    background-color: #1ebe5d;
+.whatsapp-flotante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Redondea los bordes blancos para que quede perfecto */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flotante:hover img {
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
 }
 /* =========================
    BENEFICIOS
@@ -776,4 +708,195 @@ footer {
 .boton-prueba:hover {
     background: #1ebe5d;
     transform: scale(1.04);
+}
+
+/* AGREGADO */
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 800px) {
+        .contenedor-beneficios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 40px;
+    }
+
+    .contenedor-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .planes {
+        padding: 70px 10px; /* 10px de margen lateral en lugar de 20px/30px */
+    }
+
+    /* Hacemos que el contenedor aproveche el 100% del espacio disponible */
+    .contenedor-planes {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    /* Reducimos un poco el relleno interno de la tarjeta para que el texto respire mejor */
+    .plan {
+        padding: 30px 20px; 
+        border-radius: 12px; /* Un borde un poco más formal y menos curvo */
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor-beneficios {
+        grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas */
+        gap: 15px; /* Espaciado más pequeño */
+    }
+
+    .beneficio {
+        padding: 15px 10px; /* Achica el relleno para hacerlos cuadrados */
+        text-align: center;
+    }
+
+    .beneficio-icono {
+        font-size: 32px; /* Ícono más chico */
+        margin-bottom: 8px;
+    }
+
+    .beneficio h3 {
+        font-size: 15px; /* Título más pequeño */
+        margin-bottom: 8px;
+    }
+
+    .beneficio p {
+        font-size: 12px; /* Texto más pequeño */
+    }
+
+    .whatsapp-flotante {
+        width: 48px; /* Tamaño más reducido para celular */
+        height: 48px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* =========================
+   HAMBURGUESA Y MENÚ MÓVIL
+========================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001; /* Siempre arriba del todo */
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all .8s ease-in-out; /* Animación de 1.5s solicitada */
+}
+
+/* Modificaciones solo para pantallas de celular o tablet */
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex;
+    }
+
+    /* Ocultar menú normal y prepararlo para desplegar */
+    nav {
+        position: relative; /* Para anclar el menú desplegable */
+    }
+
+    .menu {
+        position: absolute;
+        top: -400px; /* Escondido arriba */
+        left: 0;
+        width: 100%;
+        background-color: #080808;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        border-bottom: 2px solid #7c3aed;
+        transition: top 1s ease-in-out; /* Velocidad de bajada */
+        z-index: -1; /* Pasa por detrás de la barra del logo al bajar */
+    }
+
+    /* Clase activa cuando se abre el menú */
+    .menu.active {
+        top: 100%; /* Baja hasta quedar justo debajo del Header */
+    }
+
+    /* Animación de la Hamburguesa a flecha hacia arriba (^) */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) translateX(-6px) rotate(-45deg);
+        width: 20px;
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0; /* Desaparece la línea del medio */
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) translateX(6px) rotate(45deg);
+        width: 20px;
+    }
+    .whatsapp-flotante {
+        width: 48px; /* Tamaño más reducido para celular */
+        height: 46px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* =========================
+   BOTÓN VOLVER ARRIBA
+========================= */
+footer {
+    position: relative; /* Fundamental para que el botón se guíe por el footer */
+}
+
+.volver-arriba {
+    position: absolute;
+    right: 40px; /* Lado derecho en Computadora */
+    top: 40px; 
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0; /* Oculto inicialmente */
+    transform: scale(0.3) translateY(30px); /* Achicado y escondido hacia abajo */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación de rebote (sale de lo negro) */
+    pointer-events: none; /* Evita que se toque cuando no se ve */
+}
+
+/* Clase que aplicaremos con Javascript al ver el footer */
+.volver-arriba.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Se agranda a tamaño normal */
+    pointer-events: auto;
+}
+
+.volver-arriba:hover {
+    color: #128c7e; /* Efecto hover opcional */
+}
+
+/* Ubicación en celulares (Izquierda, según tu recuadro verde) */
+@media (max-width: 800px) {
+    .volver-arriba {
+        right: auto; /* Anulamos la derecha */
+        left: 20px;  /* Lo pegamos a la izquierda */
+        top: 25px;   /* Ajustamos la altura */
+        font-size: 14px;
+    }
 }

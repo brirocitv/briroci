@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>BRIROCI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,13 +14,19 @@
     <nav>
         <div class="logo">BRIROCI</div>
 
-        <ul class="menu">
-          <li><a href="#inicio">Inicio</a></li>
-<li><a href="#servicios">Servicios</a></li>
-<li><a href="#planes">Planes</a></li>
-<li><a href="#preguntas">Preguntas</a></li>
-<li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <!-- Menú Hamburguesa -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="menu" id="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
     </nav>
 </header>
 
@@ -29,23 +35,10 @@
 
     <div class="contenido-inicio">
 
-        <div class="etiqueta-inicio">
-            📺 TV DIGITAL
-        </div>
-
         <h1>
             Todo el entretenimiento
             <span>en un solo lugar</span>
         </h1>
-
-        <p>
-            Fútbol, películas, series, canales,
-            eventos y documentales.
-        </p>
-
-        <div class="precio-inicio">
-            Desde <strong>$18.000</strong> por mes
-        </div>
 
         <div class="botones-inicio">
 
@@ -64,73 +57,9 @@
 
 </div>
 
-    </div>
-
-    </div>
-
 </section>
 
 <section id="servicios" class="servicios">
-
-    <div class="contenedor-servicios">
-
-        <div class="tarjeta">
-            <div class="icono">⚽</div>
-            <h3>Pack de fútbol</h3>
-            <p>
-                Disfrutá del contenido de fútbol
-                incluido en nuestros planes.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <div class="icono">🎬</div>
-            <h3>Películas</h3>
-            <p>
-                Una amplia variedad de películas
-                para disfrutar desde tu dispositivo.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <div class="icono">📺</div>
-            <h3>Series</h3>
-            <p>
-                Disfrutá de tus series favoritas
-                desde la comodidad de tu hogar.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <div class="icono">🎵</div>
-            <h3>YouTube y Spotify</h3>
-            <p>
-                También podés solicitar la activación
-                de YouTube y Spotify Premium.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <div class="icono">📺</div>
-            <h3>Convertidores Smart TV</h3>
-            <p>
-                Convertí tu TV en Smart con nuestros convertidores
-                con sistema Android.
-            </p>
-
-            <a
-                href="https://wa.me/543517360226?text=Hola%20BRIROCI%2C%20quiero%20consultar%20por%20los%20convertidores%20Smart%20TV."
-                class="boton"
-                target="_blank">
-                Consultar
-            </a>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="beneficios">
     
 </section>
 <section class="beneficios">
@@ -185,14 +114,11 @@
     </div>
 
 <section id="planes" class="planes">
-     
-
-    <section id="planes" class="planes">
 
     <h2>Nuestros planes</h2>
 
     <p class="subtitulo">
-        Entretenimiento completo en un solo lugar.
+        Disfrutá de una amplia variedad de contenidos desde un mismo reproductor.
     </p>
 
     <div class="contenedor-planes">
@@ -201,21 +127,14 @@
 
         <div class="plan">
 
-            <h3>Plan BRIROCI</h3>
-
-            <div class="precio">
-                $18.000
+            <div class="etiqueta">
+                INDIVIDUAL
             </div>
 
-            <p class="periodo">
-                por mes
-            </p>
-
-            <h4>Entretenimiento completo en un solo lugar</h4>
+            <h3>Plan BRIROCI</h3>
 
             <p class="descripcion-plan">
-                Disfrutá de una amplia variedad de contenidos
-                desde un mismo reproductor.
+                Disponible para hasta 3 dispositivos simultaneamente.
             </p>
 
             <ul class="lista-plan">
@@ -236,11 +155,6 @@
 
             </ul>
 
-            <p class="experiencia">
-                Todo organizado en una sola experiencia,
-                simple y fácil de usar.
-            </p>
-
             <a 
                 href="https://wa.me/543517360226?text=Hola%20BRIROCI%2C%20quiero%20consultar%20por%20el%20plan%20de%20%2418.000."
                 class="boton"
@@ -250,6 +164,43 @@
 
         </div>
 
+
+        <!-- PLAN $10.000 -->
+
+        <div class="plan musica">
+
+            <div class="etiqueta">
+                INDIVIDUAL
+            </div>
+
+            <h3>Plan Musica</h3>
+
+            <p class="descripcion-plan">
+                Activación de YouTube y Spotify
+            </p>
+
+            <ul class="lista-plan">
+
+                <li> <strong>Youtube</strong> — Disfrutar videos sin publicidad y sin tener la pantalla activa.</li>
+
+                <li> <strong>Spotify</strong> — Tener toda la biblioteca de la aplicacion disponible sin anuncios.</li>
+
+            </ul>
+
+            <a 
+                href="https://wa.me/543517360226?text=Hola%20BRIROCI%2C%20quiero%20consultar%20por%20el%20plan%20de%20%2424.000."
+                class="boton"
+                target="_blank">
+                Consultar plan
+            </a>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="contenedor-planes">
 
         <!-- PLAN $24.000 -->
 
@@ -261,19 +212,8 @@
 
             <h3>Plan BRIROCI + Música</h3>
 
-            <div class="precio">
-                $24.000
-            </div>
-
-            <p class="periodo">
-                por mes
-            </p>
-
-            <h4>Entretenimiento completo en un solo lugar</h4>
-
             <p class="descripcion-plan">
-                Disfrutá de una amplia variedad de contenidos
-                desde un mismo reproductor.
+                Disponible para hasta 5 dispositivos simultaneamente.
             </p>
 
             <ul class="lista-plan">
@@ -293,13 +233,7 @@
                 <li>🌎 <strong>Documentales</strong> — Naturaleza, historia, ciencia, cultura y mucho más.</li>
 
                 <li>🎵 <strong>Música</strong> — Podés escuchar tu música preferida desde cualquier lugar y en segundo plano.</li>
-
             </ul>
-
-            <p class="experiencia">
-                Todo organizado en una sola experiencia,
-                simple y fácil de usar.
-            </p>
 
             <a 
                 href="https://wa.me/543517360226?text=Hola%20BRIROCI%2C%20quiero%20consultar%20por%20el%20plan%20de%20%2424.000."
@@ -309,6 +243,8 @@
             </a>
 
         </div>
+
+        
 
     </div>
 
@@ -342,53 +278,20 @@
         </details>
 
         <details>
-            <summary>¿Cuánto cuesta el servicio?</summary>
-            <p>
-                Los planes disponibles tienen valores
-                desde $18.000 hasta $24.000.
-            </p>
-        </details>
-
-        <details>
             <summary>¿Qué puedo consultar?</summary>
             <p>
-                Podés consultar por TV digital, pack de fútbol,
-                películas, series y servicios Premium.
+                Podés consultar por cualquiera de nuestros servicios de streaming y musica.
             </p>
         </details>
 
         <details>
             <summary>¿Puedo activar YouTube y Spotify Premium?</summary>
             <p>
-                Sí. Podés consultar por la activación
-                de YouTube y Spotify Premium.
-            </p>
-        </details>
-
-        <details>
-            <summary>¿Cómo me comunico con BRIROCI?</summary>
-            <p>
-                Podés escribirnos directamente por WhatsApp.
+                Sí. Podés consultar por la activación de YouTube y Spotify Premium.
             </p>
         </details>
 
     </div>
-
-</section>
-<section id="contacto" class="contacto">
-
-    <h2>¿Querés contratar BRIROCI?</h2>
-
-    <p>
-        Escribinos por WhatsApp y te contamos las opciones disponibles.
-    </p>
-
-    <a 
-        href="https://wa.me/543517360226?text=Hola%20BRIROCI%2C%20quiero%20consultar%20por%20el%20servicio%20de%20TV%20digital."
-        class="boton whatsapp"
-        target="_blank">
-        📲 Consultar por WhatsApp
-    </a>
 
 </section>
 <a 
@@ -396,31 +299,57 @@
     class="whatsapp-flotante"
     target="_blank"
     aria-label="Contactar por WhatsApp">
-    💬
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBTDYHj9XNJ1aq4xZ1IPYKLb1ky4M1sLIWiDaVg2_B5A&s" alt="WhatsApp BRIROCI">
 </a>
 <footer>
 
-    <div class="footer-contenido">
-
-        <h3>BRIROCI</h3>
-
-        <p>
-            TV digital y entretenimiento en un solo lugar.
-        </p>
-
-        <a 
-            href="https://wa.me/543517360226"
-            target="_blank">
-            📲 WhatsApp: 351 736 0226
-        </a>
-
-        <p class="copyright">
-            © 2026 BRIROCI. Todos los derechos reservados.
-        </p>
+    <footer>
+    <!-- Botón Volver Arriba -->
+    <a href="#inicio" class="volver-arriba" id="btn-arriba">Volver arriba ⇈</a>
+    
+    <!-- Aquí sigue tu título h2 de BRIROCI y los textos de copyright que ya tenías -->
+    <h2>BRIROCI</h2>
+    <p>TV digital y entretenimiento en un solo lugar.</p>
+    <p>&copy; 2026 BRIROCI. Todos los derechos reservados.</p>
+</footer>
 
     </div>
 
 </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Activar menú al tocar hamburguesa
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al tocar una opción (Inicio, Planes, etc.)
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Detector para animar "Volver Arriba"
+    const btnArriba = document.getElementById('btn-arriba');
+    const footer = document.querySelector('footer');
+
+    // IntersectionObserver detecta cuándo un elemento entra en la pantalla
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            btnArriba.classList.add('visible'); // El footer se ve: aparece el botón
+        } else {
+            btnArriba.classList.remove('visible'); // El footer no se ve: desaparece
+        }
+    }, { threshold: 0.1 }); // Se activa cuando se ve al menos un 10% del footer
+
+    observer.observe(footer);
+</script>
 
 </body>
 </html>
